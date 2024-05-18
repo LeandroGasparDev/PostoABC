@@ -3,7 +3,7 @@
 # Desenvolvido em Delphi 11.3 - Alexandria e Firebird 5.0
 
 # Descrição
-O Sistema de Gerenciamento de Abastecimentos é uma aplicação Delphi desenvolvida para controlar abastecimentos realizados no do posto ABC. 
+O Sistema de Gerenciamento de Abastecimentos - Posto ABC, é uma aplicação, desenvolvida para controlar abastecimentos realizados no do posto ABC. 
 O sistema calcula automaticamente impostos sobre os abastecimentos e gera relatórios detalhados para acompanhamento e controle.
 
 # Funcionalidades
@@ -23,8 +23,8 @@ O sistema calcula automaticamente impostos sobre os abastecimentos e gera relat�
   -	Apresenta a soma total do valor abastecido no período escolhido.
 
 #  Informações Técnicas
-- O banco de dados é criado de forma totalmente dinâmica na pasta db (dentro da pasta do exe)
-- Os dados são armazenados em banco de dados Firebird usando o componente FireDAC para manipulação dos dados.
+- Foi utilizado Firebird 5.0 para a criação do banco de dados
+- O banco de dados é criado de forma dinâmica, encapsulado no codigo fonte do projeto, é criado na pasta "DB" (dentro da pasta do .exe)
 
 # Observações
 - Este README é um guia básico. 
