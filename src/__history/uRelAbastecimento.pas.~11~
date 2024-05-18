@@ -1,0 +1,68 @@
+unit uRelAbastecimento;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, RLReport;
+
+type
+  TfrmRelAbastecimento = class(TForm)
+    qryAbastecimento: TFDQuery;
+    dtsAbastecimento: TDataSource;
+    qryAbastecimentoABASTECIMENTOID: TIntegerField;
+    qryAbastecimentoDT_ABASTECIMENTO: TDateField;
+    qryAbastecimentoLT_ABASTECIDOS: TSingleField;
+    qryAbastecimentoVL_POR_LITRO: TSingleField;
+    qryAbastecimentoPE_IMPOSTO: TSingleField;
+    qryAbastecimentoVL_IMPOSTO: TSingleField;
+    qryAbastecimentoBOMBAID: TIntegerField;
+    rlrprtAbastecimentos: TRLReport;
+    RLBand1: TRLBand;
+    rlblTitulo: TRLLabel;
+    rlsystmnf1: TRLSystemInfo;
+    rlsystmnf2: TRLSystemInfo;
+    RLBand2: TRLBand;
+    rlblDtAbastecimento: TRLLabel;
+    rlblLitros1: TRLLabel;
+    rlblPercentual: TRLLabel;
+    rlblBOmba: TRLLabel;
+    rlblVlAbastecimento1: TRLLabel;
+    RLBand4: TRLBand;
+    rlgrp1: TRLGroup;
+    TRLBand: TRLBand;
+    rldbtxtCodigoDT_ABASTECIMENTO: TRLDBText;
+    TRLBand5: TRLBand;
+    rlblValorGeral: TRLLabel;
+    RLDBText1: TRLDBText;
+    qryAbastecimentoVL_ABASTECIDO: TSingleField;
+    qryAbastecimentoVL_ABASTECIDO_COM_IMPOSTO: TSingleField;
+    RLDBResult1: TRLDBResult;
+    RLDBText2: TRLDBText;
+    procedure rlrprtAbastecimentosBeforePrint(Sender: TObject;
+      var PrintIt: Boolean);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmRelAbastecimento: TfrmRelAbastecimento;
+
+implementation
+
+{$R *.dfm}
+
+uses dmConexao;
+
+procedure TfrmRelAbastecimento.rlrprtAbastecimentosBeforePrint(Sender: TObject;
+  var PrintIt: Boolean);
+begin
+  qryAbastecimento.Open;
+end;
+
+end.

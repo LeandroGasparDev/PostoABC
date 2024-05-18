@@ -1,0 +1,81 @@
+unit uPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
+
+type
+  TfrmPrincipal = class(TForm)
+    MainMenu1: TMainMenu;
+    Cadas1: TMenuItem;
+    Lanamentos1: TMenuItem;
+    Lanamentos2: TMenuItem;
+    Parametros1: TMenuItem;
+    anques1: TMenuItem;
+    anques2: TMenuItem;
+    Sair1: TMenuItem;
+    Abastecimento1: TMenuItem;
+    Relatrios1: TMenuItem;
+    Lista1: TMenuItem;
+    Abastecimento2: TMenuItem;
+    procedure anques1Click(Sender: TObject);
+    procedure anques2Click(Sender: TObject);
+    procedure Sair1Click(Sender: TObject);
+    procedure Abastecimento1Click(Sender: TObject);
+    procedure Lista1Click(Sender: TObject);
+    procedure Abastecimento2Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+uses uAbastecimentoCad, uAbastecimentoLista, uRelAbastecimento;
+
+procedure TfrmPrincipal.Abastecimento1Click(Sender: TObject);
+begin
+  frmAbastecimentoCad := TfrmAbastecimentoCad.Create(nil);
+  frmAbastecimentoCad.ShowModal;
+  FreeAndNil(frmAbastecimentoCad);
+end;
+
+procedure TfrmPrincipal.Abastecimento2Click(Sender: TObject);
+begin
+  frmRelAbastecimento := TfrmRelAbastecimento.Create(nil);
+  frmRelAbastecimento.qryAbastecimento.Open;
+  frmRelAbastecimento.rlrprtAbastecimentos.Preview();
+  FreeAndNil(frmRelAbastecimento);
+end;
+
+procedure TfrmPrincipal.anques1Click(Sender: TObject);
+begin
+  //
+end;
+
+procedure TfrmPrincipal.anques2Click(Sender: TObject);
+begin
+  //
+end;
+
+procedure TfrmPrincipal.Lista1Click(Sender: TObject);
+begin
+  frmAbastecimentoLista := TfrmAbastecimentoLista.Create(nil);
+  frmAbastecimentoLista.ShowModal;
+  FreeAndNil(frmAbastecimentoLista);
+end;
+
+procedure TfrmPrincipal.Sair1Click(Sender: TObject);
+begin
+  Application.Terminate;
+end;
+
+end.

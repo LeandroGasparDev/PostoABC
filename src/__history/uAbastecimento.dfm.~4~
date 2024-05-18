@@ -1,0 +1,40 @@
+object frmAbastecimento: TfrmAbastecimento
+  Left = 0
+  Top = 0
+  Caption = 'Abastecimento'
+  ClientHeight = 729
+  ClientWidth = 1008
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object Label1: TLabel
+    Left = 7
+    Top = 6
+    Width = 150
+    Height = 15
+    Caption = 'Pesquisa de Abastecimentos'
+  end
+  object edtPesq: TEdit
+    Left = 8
+    Top = 27
+    Width = 992
+    Height = 23
+    TabOrder = 0
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 51
+    Width = 992
+    Height = 334
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = []
+  end
+end
