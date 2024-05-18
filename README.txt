@@ -3,7 +3,7 @@
 # Desenvolvido em Delphi 11.3 - Alexandria e Firebird 5.0
 
 # Descrição
-O Sistema de Gerenciamento de Abastecimentos é uma aplicação Delphi desenvolvida para controlar abastecimentos e gerenciar os tanques de combustíveis do posto ABC. 
+O Sistema de Gerenciamento de Abastecimentos é uma aplicação Delphi desenvolvida para controlar abastecimentos realizados no do posto ABC. 
 O sistema calcula automaticamente impostos sobre os abastecimentos e gera relatórios detalhados para acompanhamento e controle.
 
 # Funcionalidades
@@ -22,7 +22,6 @@ O sistema calcula automaticamente impostos sobre os abastecimentos e gera relat�
   - Relatório de Abatecimentos por Período, onde agrupa os abastecimentos por data, bomba, tanque, e exibe os totais de litros e valor de abastecimento(com imposto).
   -	Apresenta a soma total do valor abastecido no período escolhido.
 
-
 #  Informações Técnicas
 - O banco de dados é criado de forma totalmente dinâmica na pasta db (dentro da pasta do exe)
 - Os dados são armazenados em banco de dados Firebird usando o componente FireDAC para manipulação dos dados.
@@ -37,7 +36,7 @@ O sistema calcula automaticamente impostos sobre os abastecimentos e gera relat�
 - [17/05/2023 / Piraju-SP]
 
 ## Link do projeto no Github
-https://github.com/LeandroGasparDev/DesafioProg
+https://github.com/LeandroGasparDev/PostoABC
 
 Leandro B. Gaspar | Programador Delphi
 Telefone/WhatsApp:  (014) 99790-6406
