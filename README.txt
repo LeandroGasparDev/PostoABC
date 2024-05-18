@@ -15,7 +15,7 @@ O sistema calcula automaticamente impostos sobre os abastecimentos e gera relat�
 1- Cadastar/Lançar Abastecimentos:
   - Permite registrar a data, litos abastecidos, valor do abastecimento e a bomba utilizada.
   - Calcula automaticamente o imposto sobre o valor abastecido
-    - Obs: Imposto pode ser configurado na tabela de PARAMETROS_SISTEMA
+  - Obs: Imposto pode ser configurado na tabela de PARAMETROS_SISTEMA
 
 2- Lista de Abastecimentos
   - Exibe uma Pesquisa Avançada com filtros por período dos abastecimentos realizados
