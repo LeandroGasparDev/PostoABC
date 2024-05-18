@@ -33,7 +33,7 @@ O sistema calcula automaticamente impostos sobre os abastecimentos e gera relat�
 - [Leandro B. Gaspar]
   
 ## Data/Local de Criação
-- [17/05/2023 / Piraju-SP]
+- [17/05/2024 / Piraju-SP]
 
 ## Link do projeto no Github
 https://github.com/LeandroGasparDev/PostoABC
