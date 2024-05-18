@@ -9,7 +9,8 @@ uses
   uAbastecimentoLista in 'uAbastecimentoLista.pas' {frmAbastecimentoLista},
   uAbastecimentoCad in 'uAbastecimentoCad.pas' {frmAbastecimentoCad},
   uRelAbastecimento in 'uRelAbastecimento.pas' {frmRelAbastecimento},
-  uPeriodo in 'uPeriodo.pas' {frmPeriodo};
+  uPeriodo in 'uPeriodo.pas' {frmPeriodo},
+  uTanqueCad in 'uTanqueCad.pas' {Form1};
 
 {$R *.res}
 
@@ -20,5 +21,6 @@ begin
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
   Application.CreateForm(TfrmRelAbastecimento, frmRelAbastecimento);
   Application.CreateForm(TfrmPeriodo, frmPeriodo);
+  Application.CreateForm(TForm1, Form1);
   Application.Run;
 end.

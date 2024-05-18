@@ -32,6 +32,7 @@ object frmAbastecimentoLista: TfrmAbastecimentoLista
     Width = 966
     Height = 282
     DataSource = dtsAbastecimento
+    PopupMenu = PopupMenu1
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -112,6 +113,7 @@ object frmAbastecimentoLista: TfrmAbastecimentoLista
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitLeft = 6
     object BitBtn1: TBitBtn
       Left = 8
       Top = 16
@@ -312,5 +314,13 @@ object frmAbastecimentoLista: TfrmAbastecimentoLista
     DataSet = qryAbastecimento
     Left = 464
     Top = 296
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 192
+    Top = 256
+    object ExportarparaExcel1: TMenuItem
+      Caption = 'Exportar para Excel'
+      OnClick = ExportarparaExcel1Click
+    end
   end
 end

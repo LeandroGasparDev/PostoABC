@@ -8,7 +8,7 @@ uses
   Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, Vcl.ComCtrls, FireDAC.Stan.Intf,
   FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
-  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Mask, Vcl.DBCtrls;
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Mask, Vcl.DBCtrls, Vcl.Menus;
 
 type
   TfrmAbastecimentoLista = class(TForm)
@@ -35,11 +35,14 @@ type
     btnBuscar: TBitBtn;
     edtPesq: TMaskEdit;
     cboPesq: TComboBox;
+    PopupMenu1: TPopupMenu;
+    ExportarparaExcel1: TMenuItem;
     procedure btnBuscarClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn3Click(Sender: TObject);
     procedure edtPesqChange(Sender: TObject);
+    procedure ExportarparaExcel1Click(Sender: TObject);
   private
     { Private declarations }
     sqlOriginal : String;
@@ -55,7 +58,7 @@ implementation
 
 {$R *.dfm}
 
-uses dmConexao, uPrincipal;
+uses dmConexao, uPrincipal, uFuncoes;
 
 procedure TfrmAbastecimentoLista.BitBtn1Click(Sender: TObject);
 begin
@@ -123,6 +126,11 @@ begin
     qryAbastecimento.IndexFieldNames := cPesq;
     qryAbastecimento.Locate(cPesq, edtPesq.Text,[LoPartialKey,LoCaseInsensitive]);
   end;
+end;
+
+procedure TfrmAbastecimentoLista.ExportarparaExcel1Click(Sender: TObject);
+begin
+  ExportarParaExcel(gridAbastecimentos);
 end;
 
 procedure TfrmAbastecimentoLista.FormShow(Sender: TObject);
