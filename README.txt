@@ -20,7 +20,9 @@ O sistema calcula automaticamente impostos sobre os abastecimentos e gera relat�
 2- Lista de Abastecimentos
   - Exibe uma Pesquisa Avançada com filtros por período dos abastecimentos realizados
   - Exibe os Abastecimentos conforme filtro realizado
-  -	Permite Casdtrar/Lançar um novo Abastecimento
+  -	Permite Cadastrar/Lançar um novo Abastecimento
+  - Permite filtar/localizar o abastecimento por Codigo, Bomba ou Tanques
+  - Permite exportar o conteudo para excel (Botão direito do mouse na grade -> Exportar para excel)
 
 3- Relatório:
   - Relatório de Abatecimentos por Período, onde agrupa os abastecimentos por data, bomba, tanque, e exibe os totais de litros e valor de abastecimento(com imposto).
