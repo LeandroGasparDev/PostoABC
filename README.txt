@@ -6,7 +6,11 @@
 O Sistema de Gerenciamento de Abastecimentos - Posto ABC, é uma aplicação, desenvolvida para controlar abastecimentos realizados no do posto ABC. 
 O sistema calcula automaticamente impostos sobre os abastecimentos e gera relatórios detalhados para acompanhamento e controle.
 
-# Funcionalidades
+#  Informações Técnicas
+- Foi utilizado Firebird 5.0 para a criação do banco de dados
+- O banco de dados é criado de forma dinâmica, encapsulado no codigo fonte do projeto, é criado na pasta "DB" (dentro da pasta do .exe)
+
+# Funcionalidades Implementadas
 
 1- Cadastar/Lançar Abastecimentos:
   - Permite registrar a data, litos abastecidos, valor do abastecimento e a bomba utilizada.
@@ -22,9 +26,12 @@ O sistema calcula automaticamente impostos sobre os abastecimentos e gera relat�
   - Relatório de Abatecimentos por Período, onde agrupa os abastecimentos por data, bomba, tanque, e exibe os totais de litros e valor de abastecimento(com imposto).
   -	Apresenta a soma total do valor abastecido no período escolhido.
 
-#  Informações Técnicas
-- Foi utilizado Firebird 5.0 para a criação do banco de dados
-- O banco de dados é criado de forma dinâmica, encapsulado no codigo fonte do projeto, é criado na pasta "DB" (dentro da pasta do .exe)
+
+# Funcionalidades NÃO Implementadas
+  - Tela - Cadastro/Alteração de Tanques
+  - Tela - Cadastro/Alteração de Bombas
+  - Tela - Alteração de Parametros do Sistema
+
 
 # Observações
 - Este README é um guia básico. 

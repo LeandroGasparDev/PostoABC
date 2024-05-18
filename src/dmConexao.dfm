@@ -1,10 +1,10 @@
 object dm: Tdm
   OnCreate = DataModuleCreate
-  Height = 568
-  Width = 918
+  Height = 352
+  Width = 617
   object FDPhysFBDriverLink1: TFDPhysFBDriverLink
     VendorLib = 'fbclient.dll'
-    Left = 169
+    Left = 225
     Top = 32
   end
   object conexao: TFDConnection
@@ -20,7 +20,7 @@ object dm: Tdm
   end
   object qry: TFDQuery
     Connection = conexao
-    Left = 312
-    Top = 40
+    Left = 96
+    Top = 32
   end
 end

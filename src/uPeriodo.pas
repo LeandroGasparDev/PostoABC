@@ -45,9 +45,9 @@ begin
 
     if modalresult = mrOk then
     begin
-      result := True;
+      result    := True;
       dtInicio^ := edInicio.Date;
-      dtFim^ := edFim.Date;
+      dtFim^    := edFim.Date;
     end;
   end;
 end;
