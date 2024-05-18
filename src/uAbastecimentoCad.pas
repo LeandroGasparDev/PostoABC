@@ -86,15 +86,18 @@ end;
 
 function TfrmAbastecimentoCad.ValidaCampos: Boolean;
 begin
+  Result := True;
   if StrToFloatDef(edtQtdeLitros.Text,0) = 0 then
   begin
     ShowMessage('Informe a Quantidade de Litros do abastecimento');
+    Result := False;
     edtQtdeLitros.SetFocus;
   end;
 
   if StrToFloatDef(edtVLTotal.Text,0) = 0 then
   begin
     ShowMessage('Informe o R$ Total do abastecimento');
+    Result := False;
     edtVLTotal.SetFocus;
   end;
 end;
