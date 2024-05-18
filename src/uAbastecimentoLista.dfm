@@ -28,9 +28,9 @@ object frmAbastecimentoLista: TfrmAbastecimentoLista
   end
   object gridAbastecimentos: TDBGrid
     Left = 6
-    Top = 160
+    Top = 182
     Width = 966
-    Height = 304
+    Height = 282
     DataSource = dtsAbastecimento
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
@@ -201,6 +201,30 @@ object frmAbastecimentoLista: TfrmAbastecimentoLista
     TabOrder = 5
     OnClick = btnBuscarClick
   end
+  object edtPesq: TMaskEdit
+    Left = 134
+    Top = 157
+    Width = 838
+    Height = 23
+    CharCase = ecUpperCase
+    TabOrder = 6
+    Text = ''
+    OnChange = edtPesqChange
+  end
+  object cboPesq: TComboBox
+    Left = 7
+    Top = 157
+    Width = 124
+    Height = 22
+    Style = csOwnerDrawFixed
+    ItemIndex = 1
+    TabOrder = 7
+    Text = 'BOMBA'
+    Items.Strings = (
+      'CODIGO'
+      'BOMBA'
+      'TANQUE/COMBUSTIVEL')
+  end
   object qryAbastecimento: TFDQuery
     CachedUpdates = True
     Connection = dm.conexao
@@ -224,7 +248,7 @@ object frmAbastecimentoLista: TfrmAbastecimentoLista
       '    ab.abastecimentoid is not null'
       'order by ab.abastecimentoid')
     Left = 416
-    Top = 248
+    Top = 296
     object qryAbastecimentoCODIGO: TIntegerField
       FieldName = 'CODIGO'
       Origin = 'ABASTECIMENTOID'
@@ -287,6 +311,6 @@ object frmAbastecimentoLista: TfrmAbastecimentoLista
   object dtsAbastecimento: TDataSource
     DataSet = qryAbastecimento
     Left = 464
-    Top = 248
+    Top = 296
   end
 end

@@ -8,7 +8,7 @@ uses
   Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, Vcl.ComCtrls, FireDAC.Stan.Intf,
   FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
-  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Mask;
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Mask, Vcl.DBCtrls;
 
 type
   TfrmAbastecimentoLista = class(TForm)
@@ -33,10 +33,13 @@ type
     qryAbastecimentoDS_BOMBA: TStringField;
     qryAbastecimentoTANQUE_COMBUSTIVEL: TStringField;
     btnBuscar: TBitBtn;
+    edtPesq: TMaskEdit;
+    cboPesq: TComboBox;
     procedure btnBuscarClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn3Click(Sender: TObject);
+    procedure edtPesqChange(Sender: TObject);
   private
     { Private declarations }
     sqlOriginal : String;
@@ -96,6 +99,30 @@ procedure TfrmAbastecimentoLista.CodigoFormumarioShow;
 begin
   sqlOriginal := qryAbastecimento.SQL.Text;
   btnBuscar.click;
+end;
+
+procedure TfrmAbastecimentoLista.edtPesqChange(Sender: TObject);
+  function getFieldName: String;
+  begin
+    Result := '';
+    case cboPesq.ItemIndex of
+      0: Result := 'CODIGO';
+      1: Result := 'DS_BOMBA';
+      2: Result := 'TANQUE_COMBUSTIVEL';
+    end;
+  end;
+var
+  cPesq: String;
+begin
+  if edtPesq.GetTextLen > 0 then
+  begin
+    cPesq := getFieldName;
+    if cPesq = '' then
+      Exit;
+
+    qryAbastecimento.IndexFieldNames := cPesq;
+    qryAbastecimento.Locate(cPesq, edtPesq.Text,[LoPartialKey,LoCaseInsensitive]);
+  end;
 end;
 
 procedure TfrmAbastecimentoLista.FormShow(Sender: TObject);
