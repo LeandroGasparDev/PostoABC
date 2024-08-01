@@ -55,7 +55,6 @@ end;
 
 procedure TfrmPrincipal.Sair1Click(Sender: TObject);
 begin
-  showMessage('teste');
   Application.Terminate;
 end;
 
